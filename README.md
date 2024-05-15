@@ -6,19 +6,21 @@ The real website is https://itti.com.np/
 - Icons are fetched from font-awesome
 
 <!-- prettier-ignore -->
-First phase includes completion of: 
-    - Header
-    - Navbar
-    - Static landing page slider
-    - Deal of the week product cards
-    - Hover and transition effects
+First phase includes completion of:
+
+- Header
+- Navbar
+- Static landing page slider
+- Deal of the week product cards
+- Hover and transition effects
 
 <!-- prettier-ignore -->
 Second Phase includes completion of:
-    - Featured Category
-    - Best Selling Products
-    - Advertisement Banners
-    - Featured Products
-    - Scan to Download
-    - Footer
-    - Font Refining and Size Adjustment
+
+- Featured Category
+- Best Selling Products
+- Advertisement Banners
+- Featured Products
+- Scan to Download
+- Footer
+- Font Refining and Size Adjustment
