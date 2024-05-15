@@ -1,0 +1,262 @@
+/* Common CSS */
+:root{
+    font-family:'Lucida Sans';
+    padding: 0px;
+    color: #212121;
+    body{
+        margin: 0px;
+    }
+    /* --textcolor: pink; */
+}
+
+body{
+    background-color: var(--textcolor);
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    ul{
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        li{
+            display: inline-block;
+            padding: 5px;
+            i:hover{
+                cursor: pointer;
+            }
+        }
+        .iconLabel{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;    
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+
+
+/* Header CSS */
+header{ 
+    background-color: #212121;
+    color: white;
+    section{
+        font-size: 12px;
+        .adv{
+            font-size: 16px;
+        }
+        .login{
+            gap: 30px;
+        }
+        a{
+            &:visited{
+                color: white;
+            }
+            &:hover{
+                color: #df2525;
+            }
+        }
+    }
+}
+
+/* Menu CSS */
+menu{
+    margin: 0px;
+    padding: 0px;
+    background-color: #212121;
+    color: white;
+    ul{
+        margin: 0px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-duration: 150ms;
+            &:hover{
+                background-color: #df2525;
+                cursor: pointer;
+            }
+            a{
+                &:visited{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+nav{
+    section{
+        padding: 20px 0px 20px 0px;
+        gap: 20px;
+        .searchbar{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                font-size: 16px;
+                font-family:'Lucida Sans';
+                box-sizing: border-box;
+                width: 100%;
+                padding: 13px;
+                border: none;
+                border: 1px solid #6b6b6b;
+                border-radius: 12px 0px 0px 12px;
+                background-color: transparent;
+                &:focus{
+                    outline: none;
+                    background-color: #fff4f4;
+                }
+            }
+            a{
+                transform: translate(-8px); 
+                i{
+                    background-color: #df2525;
+                    color: white;
+                    font-size: 20px;
+                    padding: 13.5px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .navItems{
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+            li{
+                a{
+                    transition-duration: 150ms;
+                    &:visited{
+                        color: #212121;
+                    }
+                    &:hover{
+                        color: #df2525;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide{
+    display: flex;
+    gap: 10px;
+    .slideDesc{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        text-align: left;
+        .slideHead{
+            font-size: 35px;
+            font-weight: 500;
+        }
+        .slideSubhead{
+            font-size: 18px;
+            line-height: 10px;
+            p:nth-child(2){
+                font-weight: 500;
+            }
+        }
+        .slideBtn{
+            width: fit-content;
+            background-color: #df2525;
+            color: white;
+            box-sizing: border-box;
+            font-weight: 600;
+            padding: 15px 20px;
+            border: 2px solid #df2525;
+            border-radius: 5px;
+            transition: 150ms ease-in-out;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                color: #df2525;
+            }
+        }
+    }
+}
+
+.dotw{
+    display: flex;
+    flex-direction: column;
+    .dotwHead{
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        /* Common Card CSS */
+        ul{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            text-align: left;
+            min-height: 560px;
+            /* justify-content: space-between; */
+            border: 1px solid #6b6b6b50;
+            border-radius: 10px;
+            padding: 15px;
+            .cardImg{
+                height: 245px;
+                text-align: center;
+                overflow: hidden;
+                /* background-color: #212121; */
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            :nth-child(3){
+                font-size: 18px;
+            }
+            /* Add To Cart button */
+            .a2c{
+                font-size: 18px;
+                width: 100%;
+                height: 50px;
+                margin-top: 20px;
+                background-color: #df2525;
+                border: 2px solid #df2525;
+                border-radius: 10px;
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .cardRate{
+                font-size: 20px;
+            }
+            .cardPrice{
+                font-size: 20px;
+            }
+            .cardTime{
+                color: #df2525;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
