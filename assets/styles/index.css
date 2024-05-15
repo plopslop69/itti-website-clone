@@ -1,13 +1,20 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/fonts/fonnts.com-Skolar_Sans_Arabic_Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Common CSS */
 :root{
-    font-family:'Lucida Sans';
+    font-family:'MyFont', sans serif;
     padding: 0px;
     color: #212121;
     body{
         margin: 0px;
     }
-    /* --textcolor: pink; */
 }
+
 
 body{
     background-color: var(--textcolor);
@@ -15,7 +22,7 @@ body{
 section{
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 22px;
     align-items: center;
     width: 70%;
     text-align: center;
@@ -31,17 +38,61 @@ section{
                 cursor: pointer;
             }
         }
-        .iconLabel{
-            display: flex;
-            flex-direction: row;
-            gap: 10px;    
-        }
     }
     a{
         text-decoration: none;
     }
 }
 
+.iconLabel{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;    
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+hr{
+    border-color: #6b6b6b30;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.searchbar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        font-size: 22px;
+        font-family:'MyFont';
+        box-sizing: border-box;
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border: 1px solid #6b6b6b;
+        border-radius: 12px 0px 0px 12px;
+        background-color: transparent;
+        &:focus{
+            outline: none;
+            background-color: #fff4f4;
+        }
+    }
+    a{
+        transform: translate(-8px); 
+        i{
+            background-color: #df2525;
+            color: white;
+            font-size: 20px;
+            padding: 13.5px;
+            border-radius: 10px;
+        }
+    }
+}
 
 
 /* Header CSS */
@@ -51,7 +102,7 @@ header{
     section{
         font-size: 12px;
         .adv{
-            font-size: 16px;
+            font-size: 22px;
         }
         .login{
             gap: 30px;
@@ -102,37 +153,6 @@ nav{
     section{
         padding: 20px 0px 20px 0px;
         gap: 20px;
-        .searchbar{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            input{
-                font-size: 16px;
-                font-family:'Lucida Sans';
-                box-sizing: border-box;
-                width: 100%;
-                padding: 13px;
-                border: none;
-                border: 1px solid #6b6b6b;
-                border-radius: 12px 0px 0px 12px;
-                background-color: transparent;
-                &:focus{
-                    outline: none;
-                    background-color: #fff4f4;
-                }
-            }
-            a{
-                transform: translate(-8px); 
-                i{
-                    background-color: #df2525;
-                    color: white;
-                    font-size: 20px;
-                    padding: 13.5px;
-                    border-radius: 10px;
-                }
-            }
-        }
 
         .navItems{
             display: flex;
@@ -164,14 +184,14 @@ nav{
         align-items: flex-start;
         text-align: left;
         .slideHead{
-            font-size: 35px;
-            font-weight: 500;
+            font-size: 45px;
+            font-weight: 600;
         }
         .slideSubhead{
-            font-size: 18px;
+            font-size: 30px;
             line-height: 10px;
             p:nth-child(2){
-                font-weight: 500;
+                font-weight: 600;
             }
         }
         .slideBtn{
@@ -193,13 +213,9 @@ nav{
     }
 }
 
-.dotw{
+.dotw, .bsp, .fprod{
     display: flex;
     flex-direction: column;
-    .dotwHead{
-        font-size: 35px;
-        font-weight: 500;
-    }
     .cards{
         display: flex;
         flex-direction: row;
@@ -228,11 +244,11 @@ nav{
                 }
             }
             :nth-child(3){
-                font-size: 18px;
+                font-size: 25px;
             }
             /* Add To Cart button */
             .a2c{
-                font-size: 18px;
+                font-size: 25px;
                 width: 100%;
                 height: 50px;
                 margin-top: 20px;
@@ -240,7 +256,7 @@ nav{
                 border: 2px solid #df2525;
                 border-radius: 10px;
                 color: white;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: 'MyFont', 'MyFont Regular', 'Lucida Grande', 'MyFont Unicode', Geneva, Verdana, sans-serif;
                 &:hover{
                     cursor: pointer;
                 }
@@ -249,14 +265,253 @@ nav{
                 font-size: 20px;
             }
             .cardPrice{
-                font-size: 20px;
+                font-size: 25px;
             }
             .cardTime{
                 color: #df2525;
-                font-weight: 500;
+                font-weight: 600;
             }
         }
     }
 }
 
+/* Featured Category CSS */
 
+.fcat{
+    display: block;
+    .fcatCards{
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        row-gap: 50px;
+        .fcatCard{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            i{
+                font-size: 80px;
+                color: #212121;
+                transition: 150ms ease-in-out;
+            }
+            .fcatCardLabel{
+                font-size: 23px;
+                transition: 150ms ease-in-out;
+            }
+            &:hover i{
+                color: #df2525;
+                cursor: pointer;
+            }
+            &:hover .fcatCardLabel{
+                cursor: pointer;
+                color: #df2525;
+            }
+        }
+    }
+}
+
+.banner{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    max-height: 230px;
+    justify-content: space-between;
+    img{
+        border-radius: 10px;
+        width: 48%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+footer{
+    margin-top: 80px;
+    background-color: #212121;
+    height: fit-content;
+    padding: 50px 0px 40px 0px;
+    .footer{
+        flex-wrap: wrap;
+        color: white;
+        .footerSitemap{
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            a{
+                &:visited{
+                    color: white;
+                }
+            }
+            ul{
+                flex-direction: column;
+                text-align: left;
+                gap: 5px;
+                li:nth-child(1){
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                li:nth-child(2){
+                    text-wrap: wrap;
+                }
+                li{
+                    font-size: 20px;
+                    max-width: 330px;
+                    line-height: 22px;
+                }
+                .searchbar{
+                    width: 100%;
+                    input{
+                        border-radius: 5px;
+                        background-color: white;
+                    }
+                }
+                .footerSmp{
+                    font-size: 30px;
+                    i{
+                        padding: 0px 8px 0px 8px;
+                        transition: 150ms ease-in-out;
+                        &:hover{
+                            color: #df2525;
+                        }
+                    }
+                    
+                }
+                .footerPayment{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    /* max-width:  */
+                    gap: 10px;
+                    img{
+                        border-radius: 5px;
+                        width: 22%;
+                        object-fit: fill;
+                    }
+                }
+            }
+            .sitemapContact{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+                p{
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin: 10px 0px;
+                }
+                .iconLabel{
+                    i{
+                        text-align: center;
+                        width: 30px;
+                        font-size: 20px;
+                    }
+                    a:hover{
+                        color: #df2525;
+                    }
+
+                }
+                .footerBtn{
+                    padding: 15px 25px 15px 25px;
+                    background-color: transparent;
+                    width: fit-content;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    font-family: 'MyFont', 'MyFont Regular', 'Lucida Grande', 'MyFont Unicode', Geneva, Verdana, sans-serif;
+                    .iconLabel{
+                        align-items: center;
+                    }
+                    i{
+                        font-size: 25px;
+                        color: white;
+                        width: min-content;
+                    }
+                    &:hover{
+                        background-color: white;
+                        cursor: pointer;
+                        i{
+                            color: #df2525;
+                        }
+                        a{
+                            color: #df2525;
+                        }
+                    }
+                }
+            }
+        }
+        .footerCopyright{
+            width: 100%;
+        }
+        hr{
+            border-color: white;
+            width: 100%;
+            margin: 40px 0px 20px 0px;
+        }
+        .footerDesc{
+            margin-bottom: -15px;
+        }
+        .searchbar > a{
+            background-color: #df2525;
+            color: white;
+            font-size: 22px;
+            padding: 12.5px;
+            border-radius: 5px;
+            font-family: 'MyFont';
+        }
+    }
+}
+
+/* Scan To Download CSS */
+.s2d{
+    justify-content: left;
+    gap: 100px;
+    margin-top: 50px;
+    .s2dDesc{
+        text-align: left;
+        width: 600px;
+        .s2dHead{
+            font-size: 40px;
+            color: #df2525;
+            margin: 0px;
+            line-height: 100px;
+        }
+        .s2dSubhead{
+            line-height: 20px;
+            font-size: 25px;
+            text-wrap: wrap;
+            
+        }
+        strong{
+            color: #df2525;
+        }
+        .s2dStore{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            .s2dAppCards{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+                .s2dAppCard{
+                    padding: 0px 10px;
+                    border-radius: 5px;
+                    border: 1px solid #6b6b6b80;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .download{
+                        line-height: 0px;
+                        p:nth-child(1){
+                            color: #6b6b6b90;
+                            font-size: 20px;
+                        }
+                        p:nth-child(2){
+                            font-size: 30px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
