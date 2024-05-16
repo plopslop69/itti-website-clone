@@ -24,3 +24,12 @@ Second Phase includes completion of:
 - Scan to Download
 - Footer
 - Font Refining and Size Adjustment
+
+<!-- prettier-ignore -->
+Third Phase includes completion of:
+
+- Responsiveness implementation for most devices
+  Implementation of:
+- Slider carousel
+- Dropdown menu
+- Burger menu
