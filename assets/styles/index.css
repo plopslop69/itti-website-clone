@@ -1,0 +1,556 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/fonts/fonnts.com-Skolar_Sans_Arabic_Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Common CSS */
+:root{
+    font-family:'MyFont', sans serif;
+    padding: 0px;
+    color: #212121;
+    body{
+        margin: 0px;
+    }
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--textcolor);
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    align-items: center;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    ul{
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        li{
+            display: flex;
+            padding: 5px;
+            i:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.iconLabel{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;    
+}
+
+.title{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+hr{
+    border-color: #6b6b6b30;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.searchbar{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        font-size: 22px;
+        font-family:'MyFont';
+        box-sizing: border-box;
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border: 1px solid #6b6b6b;
+        border-radius: 12px 0px 0px 12px;
+        background-color: transparent;
+        &:focus{
+            outline: none;
+            background-color: #fff4f4;
+        }
+    }
+    a{
+        transform: translate(-9px); 
+        i{
+            background-color: #df2525;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+/* Header CSS */
+header{ 
+    background-color: #212121;
+    color: white;
+    section{ 
+        flex-wrap: wrap;
+        font-size: 18px;
+        @media only screen and (max-width: 1034px) {
+            justify-content: center;
+        }
+        .adv{
+            font-size: 25px;
+            width: 300px;
+            li{
+                margin: 0 auto;
+            }
+        }
+        .login{
+            gap: 30px;
+        }
+        a{
+            &:visited{
+                color: white;
+            }
+            &:hover{
+                color: #df2525;
+            }
+        }
+    }
+}
+
+/* Menu CSS */
+.menu{
+    width: 100%;
+    justify-content: center;
+    background-color: #212121;
+    color: white;
+    ul{
+        margin: 0px;
+        width: 80%;
+        height: fit-content;
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        li{
+            width: 150px;
+            display: flex;
+            padding: 10px 0px;
+            align-items: center;
+            justify-content: center;
+            transition-duration: 150ms;
+            &:hover{
+                background-color: #df2525;
+                cursor: pointer;
+            }
+            a{
+                &:visited{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.nav{
+    padding: 20px 0px 20px 0px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .navItems{
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width : 617px){
+            justify-content: center;
+        }
+        li{
+            a{
+                transition-duration: 150ms;
+                &:visited{
+                    color: #212121;
+                }
+                &:hover{
+                    color: #df2525;
+                }
+            }
+        }
+    }
+}
+
+
+.slide{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 50px 0 0px 0px;
+    @media screen and (max-width: 1584px) {
+        justify-content: center;
+    }
+    .slideDesc{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        .slideHead{
+            font-size: 45px;
+            font-weight: 600;
+        }
+        .slideSubhead{
+            font-size: 30px;
+            p{
+                &:nth-child(1){
+                    margin: 35px 0 0 0;
+                }
+                &:nth-child(2){
+                    margin: 10px 0 35px 0;
+                    font-weight: 600;
+                }
+            }
+        }
+        .slideBtn{
+            width: fit-content;
+            background-color: #df2525;
+            color: white;
+            box-sizing: border-box;
+            font-weight: 600;
+            padding: 15px 20px;
+            border: 2px solid #df2525;
+            border-radius: 5px;
+            transition: 150ms ease-in-out;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                color: #df2525;
+            }
+        }
+        img{
+            object-fit: cover;
+        }
+    }
+}
+
+.dotw, .bsp, .fprod{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        /* Common Card CSS */
+        ul{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            text-align: left;
+            min-height: 560px;
+            /* justify-content: space-between; */
+            border: 1px solid #6b6b6b50;
+            border-radius: 10px;
+            padding: 15px;
+            .cardImg{
+                height: 245px;
+                text-align: center;
+                overflow: hidden;
+                /* background-color: #212121; */
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            :nth-child(3){
+                font-size: 25px;
+            }
+            /* Add To Cart button */
+            .a2c{
+                font-size: 25px;
+                width: 100%;
+                height: 50px;
+                margin-top: 20px;
+                background-color: #df2525;
+                border: 2px solid #df2525;
+                border-radius: 10px;
+                color: white;
+                font-family: 'MyFont', 'MyFont Regular', 'Lucida Grande', 'MyFont Unicode', Geneva, Verdana, sans-serif;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .cardRate{
+                font-size: 20px;
+            }
+            .cardPrice{
+                font-size: 25px;
+            }
+            .cardTime{
+                color: #df2525;
+                font-weight: 600;
+            }
+            span{
+                text-decoration: line-through;
+                text-decoration-thickness: 1px;
+            }
+        }
+    }
+}
+
+/* Featured Category CSS */
+
+.fcat{
+    display: block;
+    .fcatCards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        justify-content: center;
+        gap: 50px 100px;
+        .fcatCard{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            i{
+                font-size: 80px;
+                color: #212121;
+                transition: 150ms ease-in-out;
+            }
+            .fcatCardLabel{
+                font-size: 23px;
+                transition: 150ms ease-in-out;
+            }
+            &:hover i{
+                color: #df2525;
+                cursor: pointer;
+            }
+            &:hover .fcatCardLabel{
+                cursor: pointer;
+                color: #df2525;
+            }
+        }
+    }
+}
+
+.banner{
+    padding: 70px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    img{
+        border-radius: 10px;
+        width: 48%;
+        object-fit: cover;
+        @media screen and (max-width: 1581px) {
+            width: 100%;
+        }
+    }
+}
+
+footer{
+    margin-top: 80px;
+    background-color: #212121;
+    height: fit-content;
+    padding: 50px 0px 40px 0px;
+    .footer{
+        flex-wrap: wrap;
+        color: white;
+        .footerSitemap{
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            a{
+                &:visited{
+                    color: white;
+                }
+            }
+            ul{
+                flex-direction: column;
+                text-align: left;
+                gap: 5px;
+                li:nth-child(1){
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                li:nth-child(2){
+                    text-wrap: wrap;
+                }
+                li{
+                    font-size: 20px;
+                    max-width: 330px;
+                    line-height: 22px;
+                }
+                .searchbar{
+                    width: 100%;
+                    input{
+                        border-radius: 5px;
+                        background-color: white;
+                    }
+                }
+                .footerSmp{
+                    font-size: 30px;
+                    i{
+                        padding: 0px 8px 0px 8px;
+                        transition: 150ms ease-in-out;
+                        &:hover{
+                            color: #df2525;
+                        }
+                    }
+                    
+                }
+                .footerPayment{
+                    display: flex;
+                    flex-wrap: wrap;
+                    /* max-width:  */
+                    gap: 10px;
+                    img{
+                        border-radius: 5px;
+                        width: 73px;
+                        object-fit: fill;
+                    }
+                }
+            }
+            .sitemapContact{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+                p{
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin: 10px 0px;
+                }
+                .iconLabel{
+                    i{
+                        text-align: center;
+                        width: 30px;
+                        font-size: 20px;
+                    }
+                    a:hover{
+                        color: #df2525;
+                    }
+
+                }
+                .footerBtn{
+                    padding: 15px 25px 15px 25px;
+                    background-color: transparent;
+                    width: fit-content;
+                    font-size: 25px;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    color: white;
+                    font-family: 'MyFont', 'MyFont Regular', 'Lucida Grande', 'MyFont Unicode', Geneva, Verdana, sans-serif;
+                    .iconLabel{
+                        align-items: center;
+                    }
+                    i{
+                        font-size: 25px;
+                        color: white;
+                        width: min-content;
+                    }
+                    &:hover{
+                        background-color: white;
+                        cursor: pointer;
+                        color: #df2525;
+                        i{
+                            color: #df2525;
+                        }
+                    }
+                }
+            }
+        }
+        .footerCopyright{
+            width: 100%;
+        }
+        hr{
+            border-color: white;
+            width: 100%;
+            margin: 40px 0px 20px 0px;
+        }
+        .footerDesc{
+            margin-bottom: -15px;
+        }
+        .searchbar > a{
+            background-color: #df2525;
+            color: white;
+            font-size: 22px;
+            padding: 13.5px;
+            border-radius: 5px;
+            font-family: 'MyFont';
+        }
+    }
+}
+
+/* Scan To Download CSS */
+.s2d{
+    justify-content: flex-start;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    .s2dDesc{
+        text-align: left;
+        width: 50%;
+        .s2dHead{
+            font-size: 40px;
+            color: #df2525;
+            margin-bottom: 20px;
+        }
+        .s2dSubhead{
+            font-size: 25px;
+            text-wrap: wrap;
+            p{
+                margin: 10px 0px 30px 0px;
+            }
+        }
+        strong{
+            color: #df2525;
+        }
+        .s2dStore{
+            display: flex;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            gap: 20px;
+            .s2dAppCards{
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                gap: 20px;
+                .s2dAppCard{
+                    flex-wrap: wrap;
+                    padding: 0px 10px;
+                    border-radius: 5px;
+                    border: 1px solid #6b6b6b80;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .download{
+                        p{
+                            margin: 10px 0;
+                            &:nth-child(1){
+                                color: #6b6b6b90;
+                                font-size: 20px;
+                            }
+                            &:nth-child(2){
+                                font-size: 30px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
