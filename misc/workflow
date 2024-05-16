@@ -4,3 +4,9 @@
 5. Review the required assets and fetch them from the internet 
 6. Write HTML & CSS for elements from top to bottom of the webpage, starting from Header > Navbar > Dropdown bar > ....
 7. Review the webpage layout and fix any discrepancies
+
+
+TO DO:
+1. Make responsive for desktop, mobile
+2. Implement carousel slider
+3. Implement dropdown menu

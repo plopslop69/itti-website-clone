@@ -13,6 +13,7 @@
     body{
         margin: 0px;
     }
+    box-sizing: border-box;
 }
 
 
@@ -24,7 +25,7 @@ section{
     justify-content: space-between;
     font-size: 22px;
     align-items: center;
-    width: 70%;
+    width: 75%;
     text-align: center;
     margin: 0 auto;
     ul{
@@ -32,7 +33,7 @@ section{
         list-style-type: none;
         display: flex;
         li{
-            display: inline-block;
+            display: flex;
             padding: 5px;
             i:hover{
                 cursor: pointer;
@@ -51,19 +52,19 @@ section{
 }
 
 .title{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 hr{
     border-color: #6b6b6b30;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .searchbar{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,12 +84,12 @@ hr{
         }
     }
     a{
-        transform: translate(-8px); 
+        transform: translate(-9px); 
         i{
             background-color: #df2525;
             color: white;
             font-size: 20px;
-            padding: 13.5px;
+            padding: 15px;
             border-radius: 10px;
         }
     }
@@ -99,10 +100,18 @@ hr{
 header{ 
     background-color: #212121;
     color: white;
-    section{
-        font-size: 12px;
+    section{ 
+        flex-wrap: wrap;
+        font-size: 18px;
+        @media only screen and (max-width: 1034px) {
+            justify-content: center;
+        }
         .adv{
-            font-size: 22px;
+            font-size: 25px;
+            width: 300px;
+            li{
+                margin: 0 auto;
+            }
         }
         .login{
             gap: 30px;
@@ -119,20 +128,22 @@ header{
 }
 
 /* Menu CSS */
-menu{
-    margin: 0px;
-    padding: 0px;
+.menu{
+    width: 100%;
+    justify-content: center;
     background-color: #212121;
     color: white;
     ul{
         margin: 0px;
-        width: 100%;
-        height: 50px;
+        width: 80%;
+        height: fit-content;
         display: flex;
-        justify-content: space-between;
+        justify-content:center;
+        flex-wrap: wrap;
         li{
-            width: 100%;
+            width: 150px;
             display: flex;
+            padding: 10px 0px;
             align-items: center;
             justify-content: center;
             transition-duration: 150ms;
@@ -149,39 +160,47 @@ menu{
     }
 }
 
-nav{
-    section{
-        padding: 20px 0px 20px 0px;
-        gap: 20px;
-
-        .navItems{
-            display: flex;
-            gap: 30px;
-            justify-content: space-between;
-            li{
-                a{
-                    transition-duration: 150ms;
-                    &:visited{
-                        color: #212121;
-                    }
-                    &:hover{
-                        color: #df2525;
-                    }
+.nav{
+    padding: 20px 0px 20px 0px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .navItems{
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width : 617px){
+            justify-content: center;
+        }
+        li{
+            a{
+                transition-duration: 150ms;
+                &:visited{
+                    color: #212121;
+                }
+                &:hover{
+                    color: #df2525;
                 }
             }
         }
     }
 }
 
+
 .slide{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    padding: 50px 0 0px 0px;
+    @media screen and (max-width: 1584px) {
+        justify-content: center;
+    }
     .slideDesc{
         display: flex;
-        gap: 20px;
         flex-direction: column;
         justify-content: left;
-        align-items: flex-start;
         text-align: left;
         .slideHead{
             font-size: 45px;
@@ -189,9 +208,14 @@ nav{
         }
         .slideSubhead{
             font-size: 30px;
-            line-height: 10px;
-            p:nth-child(2){
-                font-weight: 600;
+            p{
+                &:nth-child(1){
+                    margin: 35px 0 0 0;
+                }
+                &:nth-child(2){
+                    margin: 10px 0 35px 0;
+                    font-weight: 600;
+                }
             }
         }
         .slideBtn{
@@ -210,15 +234,20 @@ nav{
                 color: #df2525;
             }
         }
+        img{
+            object-fit: cover;
+        }
     }
 }
 
 .dotw, .bsp, .fprod{
     display: flex;
     flex-direction: column;
+    width: 80%;
     .cards{
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
 
         /* Common Card CSS */
@@ -271,6 +300,10 @@ nav{
                 color: #df2525;
                 font-weight: 600;
             }
+            span{
+                text-decoration: line-through;
+                text-decoration-thickness: 1px;
+            }
         }
     }
 }
@@ -281,8 +314,9 @@ nav{
     display: block;
     .fcatCards{
         display: grid;
-        grid-template-columns: repeat(6, auto);
-        row-gap: 50px;
+        grid-template-columns: repeat(auto-fill, 100px);
+        justify-content: center;
+        gap: 50px 100px;
         .fcatCard{
             display: flex;
             flex-direction: column;
@@ -309,17 +343,20 @@ nav{
 }
 
 .banner{
-    margin-top: 80px;
-    margin-bottom: 80px;
+    padding: 70px 0;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    max-height: 230px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
     img{
         border-radius: 10px;
         width: 48%;
-        height: 100%;
         object-fit: cover;
+        @media screen and (max-width: 1581px) {
+            width: 100%;
+        }
     }
 }
 
@@ -335,6 +372,7 @@ footer{
             width: 100%;
             display: inline-flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             a{
                 &:visited{
                     color: white;
@@ -376,12 +414,12 @@ footer{
                 }
                 .footerPayment{
                     display: flex;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     /* max-width:  */
                     gap: 10px;
                     img{
                         border-radius: 5px;
-                        width: 22%;
+                        width: 73px;
                         object-fit: fill;
                     }
                 }
@@ -414,6 +452,7 @@ footer{
                     font-size: 25px;
                     border-radius: 5px;
                     border: 1px solid white;
+                    color: white;
                     font-family: 'MyFont', 'MyFont Regular', 'Lucida Grande', 'MyFont Unicode', Geneva, Verdana, sans-serif;
                     .iconLabel{
                         align-items: center;
@@ -426,10 +465,8 @@ footer{
                     &:hover{
                         background-color: white;
                         cursor: pointer;
+                        color: #df2525;
                         i{
-                            color: #df2525;
-                        }
-                        a{
                             color: #df2525;
                         }
                     }
@@ -451,7 +488,7 @@ footer{
             background-color: #df2525;
             color: white;
             font-size: 22px;
-            padding: 12.5px;
+            padding: 13.5px;
             border-radius: 5px;
             font-family: 'MyFont';
         }
@@ -460,39 +497,39 @@ footer{
 
 /* Scan To Download CSS */
 .s2d{
-    justify-content: left;
-    gap: 100px;
+    justify-content: flex-start;
     margin-top: 50px;
+    flex-flow: row wrap;
     .s2dDesc{
         text-align: left;
-        width: 600px;
+        width: 50%;
         .s2dHead{
             font-size: 40px;
             color: #df2525;
-            margin: 0px;
-            line-height: 100px;
+            margin-bottom: 20px;
         }
         .s2dSubhead{
-            line-height: 20px;
             font-size: 25px;
             text-wrap: wrap;
-            
+            p{
+                margin: 10px 0px 30px 0px;
+            }
         }
         strong{
             color: #df2525;
         }
         .s2dStore{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             align-items: center;
+            /* flex-wrap: wrap; */
             gap: 20px;
             .s2dAppCards{
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                width: 60%;
                 gap: 20px;
                 .s2dAppCard{
+                    flex-wrap: wrap;
                     padding: 0px 10px;
                     border-radius: 5px;
                     border: 1px solid #6b6b6b80;
@@ -500,14 +537,16 @@ footer{
                     align-items: center;
                     gap: 10px;
                     .download{
-                        line-height: 0px;
-                        p:nth-child(1){
-                            color: #6b6b6b90;
-                            font-size: 20px;
-                        }
-                        p:nth-child(2){
-                            font-size: 30px;
-                            font-weight: 600;
+                        p{
+                            margin: 10px 0;
+                            &:nth-child(1){
+                                color: #6b6b6b90;
+                                font-size: 20px;
+                            }
+                            &:nth-child(2){
+                                font-size: 30px;
+                                font-weight: 600;
+                            }
                         }
                     }
                 }
